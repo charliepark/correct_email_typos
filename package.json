@@ -1,0 +1,26 @@
+{
+  "name": "correct_email_typos",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charliepark/correct_email_typos.git"
+  },
+  "description": "When your users enter an incorrect email address, fix it for them",
+  "main": "correctEmailTypos.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "Charlie Park <charlie@charliepark.org>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "babel-loader": "^8.0.6",
+    "jest": "^25.1.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
