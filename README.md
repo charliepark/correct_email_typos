@@ -1,7 +1,7 @@
 # correctEmailTypos.js
 
 ## What is it?
-correctEmailTypos.js is a simple JavaScript function that gives you an easy, tested way to automatically fix your users' typoed email addresses. It's a JS implementation of [a similar library I originally wrote in Ruby a long time ago](https://github.com/charliepark/fat_fingers).
+correctEmailTypos.js is a simple JavaScript function that gives you an easy, tested way to automatically fix your users' typoed email addresses. It's a JS implementation of a similar library I originally wrote in Ruby a long time ago ([🔗](https://github.com/charliepark/fat_fingers)).
 
 As an example: A user with the email `joe@gmail.com` accidentally enters in `joe@gmal.cmo`, this script will fix it.
 
