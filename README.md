@@ -30,6 +30,21 @@ So you'd do something kind of like this:
   };
 ```
 
+## I prefer classes. Can I see an example of how to use it?
+
+Sure. If you check out [/src/classCorrectEmailTypos.js](https://github.com/charliepark/correct_email_typos/blob/master/src/classCorrectEmailTypos.js), you’ll see a class built using the function. You could then use that in your code like this:
+
+```js
+  import Email from './classCorrectEmailTypos';
+
+  const handleEmailUpdate = (event) => {
+    const { value: dirtyEmail } = event.target;
+    const { corrected } = new Email(dirtyEmail);
+    // now you can send `corrected` to your endpoint / database / state container / whatever
+  };
+```
+
+
 ## I'm an internet old and am not sure where the code is?
 
 Hello, fellow old! I know your pain. If you want to actually *read* the JavaScript, look in [/src/correctEmailTypos.js](https://github.com/charliepark/correct_email_typos/blob/master/src/correctEmailTypos.js). (Psst. You can also just copy that code into whatever directory your project keeps its JS. This script has zero dependencies on its own. The whole `npm run build` and `npm test` business (and Webpack, and Babel, etc.) is for the testing suite.)

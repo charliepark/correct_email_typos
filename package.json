@@ -1,6 +1,6 @@
 {
   "name": "correct_email_typos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/charliepark/correct_email_typos.git"
@@ -15,7 +15,7 @@
   "author": "Charlie Park <charlie@charliepark.org>",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.11.0",
+    "@babel/core": "^7.11.4",
     "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
     "babel-loader": "^8.1.0",

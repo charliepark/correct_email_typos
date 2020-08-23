@@ -1,4 +1,5 @@
 import correctEmailTypos from './correctEmailTypos';
+import Email from './classCorrectEmailTypos';
 
 let bad;
 let good;
@@ -7,6 +8,9 @@ let email;
 const checkArrayOfBadEmails = (array, correctEmail) => {
   array.forEach((badEmail) => {
     expect(correctEmailTypos(badEmail)).toEqual(correctEmail);
+
+    const { corrected } = new Email(badEmail);
+    expect(corrected).toEqual(correctEmail);
   });
 };
 
@@ -328,6 +332,9 @@ test('good addresses should not trip as false-positives', () => {
   ];
   good.forEach((legitEmail) => {
     expect(correctEmailTypos(legitEmail)).toEqual(legitEmail);
+
+    const { corrected } = new Email(legitEmail);
+    expect(corrected).toEqual(legitEmail);
   });
 });
 
@@ -356,6 +363,9 @@ test('TLDs should not get broken', () => {
   good.forEach((tld) => {
     email = `test@something.${tld}`;
     expect(correctEmailTypos(email)).toEqual(email);
+
+    const { corrected } = new Email(email);
+    expect(corrected).toEqual(email);
   });
 });
 
@@ -364,5 +374,8 @@ test('we expect some obscure TLDs to break, sadly', () => {
   bad.forEach((tld) => {
     email = `test@something.${tld}`;
     expect(correctEmailTypos(email)).not.toEqual(email);
+
+    const { corrected } = new Email(email);
+    expect(corrected).not.toEqual(email);
   });
 });
